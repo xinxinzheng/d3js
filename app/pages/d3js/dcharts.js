@@ -2,7 +2,7 @@
  * @Author: dupi
  * @Date: 2017-06-28 17:16:12
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-01-26 17:30:45
+ * @Last Modified time: 2018-01-26 18:30:02
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -23,10 +23,11 @@ export default class dcharts extends Component {
 
       },
     }
+
+
   }
   
   renderCharts(id,obj){
-    console.log(d3);
     let ele = d3.select("#" + id);
     console.log(ele.style('color','red'));
   }
