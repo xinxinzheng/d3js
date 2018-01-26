@@ -1,8 +1,9 @@
-.cylinder {
-  width: 80%;
-  height: 500px;
-}
-.cylinder #cylinder {
+.dcharts {
   width: 100%;
   height: 100%;
+}
+.dcharts .cylinder {
+  width: 80%;
+  height: 500px;
+  margin: auto;
 }
