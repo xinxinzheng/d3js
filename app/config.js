@@ -2,12 +2,12 @@ export default (() => {
   window.$GLOBALCONFIG = {};
   +function (global) {
     // 本地开发打开的路径以及端口
-    global.$ctx = 'http://localhost:8080';
+    global.$ctx = 'http://localhost:8000';
 
     // 用户登录信息
     global.STAFF = {
       code: 'admin',
-      name: '黄焖鸡',
+      name: 'duxiaodu',
     };
 
     // 系统一二级菜单
@@ -19,12 +19,8 @@ export default (() => {
         url: '',
         children: [
             { id: 600110232, name: '表格', url: 'table', icon: 'user' },
-            { id: 600110242, name: '表格1', url: 'table1', icon: 'user' },
-            { id: 600110242, name: '表格2', url: 'table2', icon: 'user' },
-            { id: 600110242, name: '表格3', url: 'table3', icon: 'user' },
             { id: 600110233, name: '图表', url: 'echarts', icon: 'area-chart' },
             { id: 600110234, name: '编辑器', url: 'editor', icon: 'area-chart' },
-            { id: 600110235, name: 'kindEditor', url: 'kindEditor', icon: 'area-chart' },
         ],
       },
       {

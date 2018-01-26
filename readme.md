@@ -1,17 +1,25 @@
-# 提示
+# 前言
 
-当前的项目已经全部迁移到新的地址https://github.com/duxianwei520/react  希望小伙伴们一起来维护
+为什么选择react而不是vue也不是angular？
+
+ng1.x老衲用过3个月，觉得整个框架组织结构更像是专门为系统指定的，要什么有什么，这样的话对于在线mobile app性能是个大的考验，还有一个不喜欢的点是他的写法更像是PHP哪种形式的绑定，后端的MVC思维浓厚
+
+vue贫道也做过一个微信端的小项目，觉得还是比较容易上手的，1.x感觉跟ng1.x的思想上更加接近，但是对于开发app的话，没有weex也只能依赖于cordova之类的混合开发，觉得在性能上可能还是差了许多，再有一个重要的点就是，主要是尤小溪个人的项目，虽然后面也有不少的人加入，但是贫道还是觉得个人的力量相对公司还是有限，当然这也不妨碍我贫道在一些比较小的项目中去用vue。
+
+最后react可能是所有方案里面最合适最这种的一个技术栈了，不加全家桶的话，跟vue一样的轻量，移动端有比较成熟的react native。
+
+so，就是这个啦
 
 
 ## 技术栈
 
-react + redux + react-router + webpack + ES6/7 + fetch + less
+react@16.0 + redux@3.7.2 + react-router@3.2.0 + webpack@3.10.0 + fetch@2.0.3 + less@2.7.1 + antd@3.1.3
 
 
 
 ## 项目运行
 
-#### 注意：由于涉及大量的 ES6/7 等新属性，nodejs 必须是 6.0 以上版本 ，node 7 是先行版，有可能会出问题，建议使用 node 6 稳定版
+#### 注意：由于涉及大量的 ES6/7 等新属性，nodejs 必须是 6.0 以上版本 ，建议使用 node 最新LTS版
 
 ```
 git clone https://github.com/duxianwei520/react.git  
@@ -26,11 +34,11 @@ npm run build (打包)
 
 另开启一个命令窗口 启动node的本地json数据代理服务
 
-node mockserver.js (前端本地用node模拟接口进程)
+npm run mock (对，就是传说中的 mockjs http://highsea90.com/t/mock/)
 
-想要开启聊天室功能 需要进入到server文件目录 然后开启socket服务
+想要体验聊天室功能  先开启socket服务 运行命令
 
-node imSercer.js
+npm run chat
 
 ```
 
@@ -48,8 +56,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 如果这个方法还不行的话，可以到我的百度网盘上面去下载我已经压缩好的npm依赖包，地址是
 ``` 
-https://pan.baidu.com/s/1o8mOrV0
-
+https://pan.baidu.com/s/1c1MMUHU
 ```
 把下载到本地的node_modules.rar文件直接解压到跟app同级的当前文件夹，记住是当前文件夹的，然后不用npm install就可以直接npm start跑起来项目了。
 
@@ -62,12 +69,12 @@ https://pan.baidu.com/s/1o8mOrV0
 - [√] 登录，以及登录权限控制
 - [√] 退出
 - [√] 欢迎主页
-- [√] 左侧菜单，正常moni切换
-- [√] redux完整范例
-- [√] nodejs代理数据示例
+- [√] 左侧菜单，正常mini切换
+- [√] redux完整示范
+- [√] mockjs模拟后端返回接口
 - [√] 页面高度flex自适应
 - [√] fetch数据跨域的设置
-- [√] 实时的webpack包大小预览
+- [√] 实时的webpack包大小预览,方便优化
 - [√] draftjs编辑器
 - [√] kindeditor编辑器
 - [√] 聊天室
@@ -86,13 +93,9 @@ https://pan.baidu.com/s/1o8mOrV0
 ## 部分截图
 
 
-### 欢迎页
+### 列表页 mock数据返回
 
-<img src="https://github.com/duxianwei520/react/blob/master/screenshots/welcome.gif" width="976" height="586"/>
-
-### 列表页
-
-<img src="https://github.com/duxianwei520/react/blob/master/screenshots/list.gif" width="960" height="581"/>
+<img src="https://github.com/duxianwei520/react/blob/master/screenshots/list.gif" width="1082" height="557"/>
 
 ### 图表
 
@@ -126,12 +129,8 @@ https://pan.baidu.com/s/1o8mOrV0
 ├─.eslintignore	                      // eslint设置忽略的文件
 ├─.eslintrc.json                      // eslint的配置文件
 ├─.gitignore                          // git忽略上传的文件
-├─mockserver.js                       // node本地转发json的执行文件
 ├─package.json                        // npm命令包
-├─proxy.js                            // 设置代理的js,现在基本不用
 ├─readme.md                           // 项目介绍
-├─webpack-test.config.js              // webpack测试的配置文件，目前还没做
-├─webpack.config.js                   // 目前项目webpack的配置文件
 ├─_config.yml 
 ├─_gitattributes
 ├─test
@@ -141,9 +140,6 @@ https://pan.baidu.com/s/1o8mOrV0
 |      ├─login.png
 |      ├─receiveData.png
 |      ├─requestData.png
-|      └welcome.png
-├─mockapi                             // 前端静态json数据存放的文件夹
-|    └data.json
 ├─app                                 // 页面主文件
 |  ├─client.js
 |  ├─history.js
@@ -227,6 +223,6 @@ https://pan.baidu.com/s/1o8mOrV0
 [GPL](https://github.com/duxianwei520/react/blob/master/COPYING)
 
 
-## 关于交流
-想加入群聊的话，
-可以加入我创建的reactQQ群：598372207
+## 交流
+想跟其他的使用react的小伙伴们交流的话，
+可以加入我创建的reactQQ群：598372207~
