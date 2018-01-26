@@ -1,0 +1,8 @@
+.cylinder {
+  width: 80%;
+  height: 500px;
+}
+.cylinder #cylinder {
+  width: 100%;
+  height: 100%;
+}

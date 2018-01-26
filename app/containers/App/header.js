@@ -74,7 +74,7 @@ export default class Header extends Component {
           <div className="navbar-header">
             <Link to={'/'} className="navbar-brand">
               <div className="brand-title">
-                <span className="brand-text">肚皮</span>
+                <span className="brand-text">小透明</span>
               </div>
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default class Header extends Component {
             <ul className="nav navbar-top-links pull-right">
               <li className="login-info">
                 <Dropdown overlay={menu} trigger={['click']}>
-                  <a className="ant-dropdown-link">{username || '肚小肚'}</a>
+                  <a className="ant-dropdown-link">{username || '小透明'}</a>
                 </Dropdown>
               </li>
             </ul>

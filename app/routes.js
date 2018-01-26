@@ -30,6 +30,13 @@ const echarts = (location, cb) => {
   }, 'echarts')
 }
 
+// D3
+const dcharts = (location, cb) => {
+  require.ensure([], require => {
+    cb(null, require('./pages/d3js/dcharts').default)
+  }, 'dcharts')
+}
+
 // 登录
 const Login = (location, cb) => {
   require.ensure([], require => {
@@ -80,7 +87,8 @@ const routes = (
       <Route path="/table" getComponent={table} />
       <Route path="/echarts" getComponent={echarts} />
       <Route path="/editor" getComponent={editor} />
-
+      <Route path="/dcharts" getComponent={dcharts} />
+  
       <Route path="/chat" getComponent={chat} />
 
     </Route>

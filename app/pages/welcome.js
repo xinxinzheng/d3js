@@ -1,8 +1,8 @@
 /*
  * @Author: dupi
  * @Date: 2017-06-27 13:51:09
- * @Last Modified by: dupi
- * @Last Modified time: 2017-06-27 15:09:38
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2018-01-26 14:29:27
  */
 
 
@@ -33,7 +33,10 @@ export default class welcome extends Component {
     return (
       <div className="welcome">
         <div className="content">
-          <h2 className="title">肚皮叔：行，我等你</h2>
+          <h2 className="title">go go study</h2>
+          <div className="cylinder">
+            <canvas id="cylinder"></canvas>
+          </div>
         </div>
       </div>
     )
