@@ -1,10 +1,10 @@
 {
-  "name": "duxiaodu",
+  "name": "xiaotouming",
   "version": "0.0.2",
-  "description": "duxiaodu",
+  "description": "xiaotouming",
   "repository": {
     "type": "git",
-    "url": "https://github.com/duxianwei520/react"
+    "url": "https://github.com/xinxinzheng/d3js"
   },
   "private": true,
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "duxiaodu",
   "contributors": [
     {
-      "name": "HanQ"
+      "name": "zhengxinxin"
     }
   ],
   "devDependencies": {
