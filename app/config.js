@@ -7,30 +7,46 @@ export default (() => {
     // 用户登录信息
     global.STAFF = {
       code: 'admin',
-      name: 'duxiaodu',
+      name: 'xiaotouming',
     };
 
     // 系统一二级菜单
     global.NAVIGATION = [
       {
         id: 600110230,
-        name: '功能列表',
+        name: 'Basic',
         icon: 'book',
         url: '',
         children: [
-            { id: 600110232, name: '表格', url: 'table', icon: 'user' },
-            { id: 600110233, name: '图表', url: 'echarts', icon: 'area-chart' },
-            { id: 600110234, name: '编辑器', url: 'editor', icon: 'area-chart' },
-            { id: 600110235, name: 'Dcharts', url: 'dcharts', icon: 'area-chart' },
+            { id: 600110231, name: '表格', url: 'table', icon: 'user' },
+            { id: 600110232, name: '编辑器', url: 'editor', icon: 'area-chart' }
+        ],
+      },
+      {
+        id: 600110330,
+        name: 'D3',
+        icon: 'book',
+        url: '',
+        children: [
+            { id: 600110331, name: 'Dcharts', url: 'dcharts', icon: 'area-chart' },
         ],
       },
       {
         id: 600110430,
-        name: '其他',
+        name: 'Echarts',
+        icon: 'book',
+        url: '',
+        children: [
+            { id: 600110431, name: 'Pie', url: 'echarts', icon: 'area-chart' },
+        ],
+      },
+      {
+        id: 600110530,
+        name: 'Others',
         icon: 'calculator',
         url: '',
         children: [
-            { id: 600110431, name: '聊天室', url: 'chat', icon: 'book' },
+            { id: 600110532, name: '聊天室', url: 'chat', icon: 'book' },
         ],
       },
     ];
