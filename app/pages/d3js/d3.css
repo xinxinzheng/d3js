@@ -1,9 +1,16 @@
 .dcharts {
   width: 100%;
   height: 100%;
+  display: flex;
 }
-.dcharts .cylinder {
-  width: 80%;
-  height: 500px;
+.dcharts .bar {
+  flex: 1;
+}
+.dcharts .bar .cylinder {
+  width: 100%;
+  height: 400px;
   margin: auto;
+}
+.dcharts .force {
+  flex: 1;
 }
