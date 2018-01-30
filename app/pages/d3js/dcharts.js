@@ -11,6 +11,7 @@ import BarDcharts from './bar'
 import LineDcharts from './lines'
 import ForceDcharts from './force'
 import CanvasForceDcharts from './cforce'
+import SplashedDcharts from './splashed'
 import * as d3 from 'd3'
 import "./d3.less";
 
@@ -54,6 +55,7 @@ export default class dcharts extends Component {
                 </div>
                 <div className="flex-row">
                     <LineDcharts />
+                    <SplashedDcharts />
                 </div>
             </div>
         )
