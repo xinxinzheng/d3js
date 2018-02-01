@@ -2,7 +2,7 @@
  * @Author: dupi
  * @Date: 2017-06-28 17:16:12
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-01-30 15:41:56
+ * @Last Modified time: 2018-02-01 15:15:41
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -22,7 +22,6 @@ export default class CanvasForceDcharts extends Component {
         this.width = 40;
         this.height = 300;
         this.padding = {left:40,right:20,top:20,bottom:20};
-        this.addEle = this.addEle.bind(this);
         this.nodeData = [{id:200,color:'red'},{id:201,color:'orange'},{id:202,color:'yellow'},{id:203,color:'green'},{id:204,color:'cyan'},{id:205,color:'blue'}];
     }
 
@@ -48,12 +47,6 @@ export default class CanvasForceDcharts extends Component {
 
     updateCharts(){
        
-    }
-    //添加元素
-    addEle(){
-        // let n = Math.random() * 150;
-        // this.data.push(n.toFixed(0));
-        // this.updateCharts();
     }
 
     componentDidMount() {
