@@ -2,7 +2,7 @@
  * @Author: dupi
  * @Date: 2017-06-28 17:16:12
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-02-01 16:22:52
+ * @Last Modified time: 2018-02-02 15:11:58
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -79,16 +79,21 @@ export default class SplashedDcharts extends Component {
         }).attr('fill',(d , i)=> {
             return this.colors[i]
         })
-        console.log(d3.drag().container)
-        enter.call(d3.drag().container(enter).subject(function(){
-            return d3.select(this);
-            
-        }).on('start',function(d){
+
+        ele.selectAll('circle').call(d3.drag().on('start',function(d){
             d3.select(this).attr('fill','red');
         }).on('drag',function(d){
             d3.select(this).attr('cx',d3.event.x).attr('cy',d3.event.y);
         }).on('end',function(d){
             d3.select(this).attr('fill','blue');
+        }))
+
+        ele.selectAll('circle').call(d3.zoom().duration(400).translateExtent([1,10]).clickDistance(100).on('start',function(){
+            d3.select(this).attr('r',10)
+        }).on('zoom',function(){
+            d3.select(this).attr('r',20)
+        }).on('end',function(){
+            d3.select(this).attr('r',10)
         }))
 
         exit.transition().duration(1000).attr('fill','white').remove();
