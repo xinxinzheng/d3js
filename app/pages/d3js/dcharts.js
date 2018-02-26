@@ -2,7 +2,7 @@
  * @Author: dupi
  * @Date: 2017-06-28 17:16:12
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-01-30 15:33:47
+ * @Last Modified time: 2018-02-08 14:58:10
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -12,6 +12,7 @@ import LineDcharts from './lines'
 import ForceDcharts from './force'
 import CanvasForceDcharts from './cforce'
 import SplashedDcharts from './splashed'
+import PieDcharts from './PieDcharts'
 import * as d3 from 'd3'
 import "./d3.less";
 
@@ -49,9 +50,12 @@ export default class dcharts extends Component {
         return ( 
             <div className = "dcharts" >
                 <div className="flex-row">
+                    <PieDcharts />
+                    <ForceDcharts />
+                </div>
+                <div className="flex-row">
                     <BarDcharts />
                     <CanvasForceDcharts />
-                    <ForceDcharts />
                 </div>
                 <div className="flex-row">
                     <LineDcharts />

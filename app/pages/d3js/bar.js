@@ -2,7 +2,7 @@
  * @Author: dupi
  * @Date: 2017-06-28 17:16:12
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-02-01 15:06:10
+ * @Last Modified time: 2018-02-23 16:23:40
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -124,7 +124,7 @@ export default class BarDcharts extends Component {
     }
 
     updateCharts(){
-        let ele = d3.select('body').select('svg');
+        let ele = d3.select('body').select('#charts').select('svg');
         let max = d3.max(this.data);
         let maxs = this.height - this.padding.top;
         //绘制坐标
@@ -134,6 +134,7 @@ export default class BarDcharts extends Component {
         this.drawBar(ele,y);
         this.drawText(ele,y);
         //更新坐标轴
+        console.log(axis);
         ele.select('g').call(axis);
        
     }

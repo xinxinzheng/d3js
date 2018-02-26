@@ -7,19 +7,30 @@
 }
 .dcharts .bar,
 .dcharts .force,
-.dcharts .lines {
+.dcharts .lines,
+.dcharts .spalshed,
+.dcharts .pie {
   flex: 1;
   height: 400px;
 }
 .dcharts .bar .charts,
 .dcharts .force .charts,
-.dcharts .lines .charts {
+.dcharts .lines .charts,
+.dcharts .spalshed .charts,
+.dcharts .pie .charts,
+.dcharts .bar #spalshed,
+.dcharts .force #spalshed,
+.dcharts .lines #spalshed,
+.dcharts .spalshed #spalshed,
+.dcharts .pie #spalshed {
   width: 100%;
   height: 300px;
   margin: auto;
 }
 .dcharts .bar button,
 .dcharts .force button,
-.dcharts .lines button {
+.dcharts .lines button,
+.dcharts .spalshed button,
+.dcharts .pie button {
   margin-left: 40px;
 }

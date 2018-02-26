@@ -2,7 +2,7 @@
  * @Author: dupi
  * @Date: 2017-06-28 17:16:12
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-02-02 15:11:58
+ * @Last Modified time: 2018-02-23 17:35:14
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -48,8 +48,19 @@ export default class SplashedDcharts extends Component {
         let xAxis = d3.axisBottom(xScale);
         let yScale = d3.scaleLinear().domain([0,1]).range([h - this.padding.top,this.padding.bottom]);
         let yAxis = d3.axisLeft(yScale);
-        ele.append('g').attr('transform','translate(' + 0 + ',' + (h - this.padding.bottom) + ')').call(xAxis);
-        ele.append('g').attr('transform','translate(' + this.padding.left + ',' + 0 + ')').call(yAxis);
+        console.log(ele.selectAll('g.xaxis')._groups);
+        if(ele.selectAll('g.xaxis').length){
+            console.log(12);
+            ele.append('g').attr('class','xaxis').attr('transform','translate(' + 0 + ',' + (h - this.padding.bottom) + ')').call(xAxis);
+        }else{
+            console.log(12);
+            ele.select('g.xaxis').call(xAxis);
+        }
+        if(ele.selectAll('g.yaxis').length){
+            ele.append('g').attr('class','yaxis').attr('transform','translate(' + this.padding.left + ',' + 0 + ')').call(yAxis);
+        }else{
+            ele.select('g.yaxis').call(yAxis);
+        }
         this.drawCircle(ele,xScale,yScale);
     }
 
