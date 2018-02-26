@@ -23,6 +23,15 @@ export default (() => {
         ],
       },
       {
+        id: 600110630,
+        name: 'WebGL',
+        icon: 'book',
+        url: '',
+        children: [
+            { id: 600110631, name: 'gl', url: 'webgl', icon: 'user' }
+        ],
+      },
+      {
         id: 600110330,
         name: 'D3',
         icon: 'book',

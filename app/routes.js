@@ -37,6 +37,12 @@ const dcharts = (location, cb) => {
   }, 'dcharts')
 }
 
+// WebGL
+const webgl = (location, cb) => {
+  require.ensure([], require => {
+    cb(null, require('./pages/webgl/webgl').default)
+  }, 'webgl')
+}
 // 登录
 const Login = (location, cb) => {
   require.ensure([], require => {
@@ -88,7 +94,7 @@ const routes = (
       <Route path="/echarts" getComponent={echarts} />
       <Route path="/editor" getComponent={editor} />
       <Route path="/dcharts" getComponent={dcharts} />
-  
+      <Route path="/webgl" getComponent={webgl} />
       <Route path="/chat" getComponent={chat} />
 
     </Route>
